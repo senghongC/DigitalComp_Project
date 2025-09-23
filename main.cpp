@@ -1,7 +1,17 @@
 #include <iostream>
 #include <string>
 using namespace std;
-
+int debug(int limit)//debug for all int
+{
+	int num;
+	while (!(cin >> num) || num <= 0 || num > limit)//keeps on looping votes_received to cin until a num is entered
+	{
+		cout << "Invalid Input.Please Re-Enter: " << endl;
+		cin.clear();//every time a wrong input is entered, before continuing the loop,the cin will be cleared here
+		cin.ignore(100, '\n');//ignore the values entered in the cin stream - moves to next line of input
+	}
+	return num;
+}
 int main() {
     double height, length, width, weight;
     string fragile;
@@ -14,21 +24,29 @@ int main() {
 
     // Get package details
     cout << "Enter item height (cm): ";
-    cin >> height;
+    height = debug(999999);
     cout << "Enter item length (cm): ";
-    cin >> length;
+    length = debug(999999);
     cout << "Enter item width (cm): ";
-    cin >> width;
+    width = debug(999999);
     cout << "Enter item weight (kg): ";
-    cin >> weight;
+    weight = debug(999999);
 
     // Fragile input
+    do {
     cout << "Is the item fragile? (yes/no): ";
     cin >> fragile;
 
+        if (fragile != "yes" && fragile != "no" &&
+            fragile != "Yes" && fragile != "No") {
+            cout << "Invalid input! Please type 'yes' or 'no'.\n";
+        }
+    } while (fragile != "yes" && fragile != "no" &&
+    fragile != "Yes" && fragile != "No");
+
     // Distance input
     cout << "Enter distance value: ";
-    cin >> distance;
+    distance = debug(999999);
 
     // ===== Vehicle Selection =====
     if (weight >= 2 && weight <= 10 &&
