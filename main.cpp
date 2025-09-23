@@ -111,8 +111,7 @@ int main() {
     cout << "Assigned Vehicle: " << vehicleType << endl;
 
     if (perKmRate > 0)
-        cout << "Base Fee: RM " << baseFee << "\nPer Km Rate: RM " << perKmRate
-             << "\nDelivery Fee: RM " << deliveryFee << endl;
+        cout << "Delivery Fee: RM " << deliveryFee << endl;
     else
         cout << "Delivery Fee: N/A (Item cannot be delivered)" << endl;
 
