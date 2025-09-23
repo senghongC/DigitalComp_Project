@@ -107,7 +107,7 @@ int main() {
     cout << "Dimensions (cm): " << height << " x " << length << " x " << width << endl;
     cout << "Weight (kg): " << weight << endl;
     cout << "Fragile: " << fragile << endl;
-    cout << "Distance: " << distanceKm << " km" << endl;
+    cout << "Distance: " << distance << " km" << endl;
     cout << "Assigned Vehicle: " << vehicleType << endl;
 
     if (perKmRate > 0)
