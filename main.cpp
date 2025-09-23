@@ -118,14 +118,22 @@ int main() {
     // ===== Confirmation Step =====
     string confirm;
     if (perKmRate > 0) {
-        cout << "\nDo you want to confirm the order? (yes/no): ";
-        cin >> confirm;
+		do {
+    		cout << "\nDo you want to confirm the order? (yes/no): ";
+    		cin >> confirm;
 
-        if (confirm == "yes" || confirm == "Yes") {
-            cout << "Order Confirmed! Your " << vehicleType << " is on the way." << endl;
-        } else {
-            cout << "Order Cancelled. No vehicle has been booked." << endl;
-        }
+    		if (confirm == "yes" || confirm == "Yes") {
+        		cout << "Order Confirmed! Your " << vehicleType << " is on the way." << endl;
+        		break; // exit loop after valid confirmation
+    		} 
+			else if (confirm == "no" || confirm == "No") {
+				cout << "Order Cancelled. No vehicle has been booked." << endl;
+				break; // exit loop after valid cancellation
+			} 
+		    else {
+		        cout << "Invalid input! Please type 'yes' or 'no'." << endl;
+		    }
+		} while (true);
     }
 
     return 0;
