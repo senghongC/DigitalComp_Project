@@ -1,9 +1,9 @@
 #include <iostream>
 #include <string>
 using namespace std;
-int debug(int limit)//debug for all int
+double debug(double limit)//debug for all int
 {
-	int num;
+	double num;
 	while (!(cin >> num) || num <= 0 || num > limit)//keeps on looping votes_received to cin until a num is entered
 	{
 		cout << "Invalid Input.Please Re-Enter: " << endl;
