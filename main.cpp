@@ -127,7 +127,7 @@ int main() {
         		cout << "Order Confirmed! Your " << vehicleType << " is on the way." << endl;
         		break; // exit loop after valid confirmation
     		} 
-			else if (confirm == "no" || confirm == "No") {
+			else if (confirm == "no" || confirm == "No" || confirm == "NO") {
 				cout << "Order Cancelled. No vehicle has been booked." << endl;
 				break; // exit loop after valid cancellation
 			} 
