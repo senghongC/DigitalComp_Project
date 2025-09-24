@@ -38,7 +38,8 @@ int main() {
     cin >> fragile;
 
         if (fragile != "yes" && fragile != "no" &&
-            fragile != "Yes" && fragile != "No") {
+            fragile != "Yes" && fragile != "No" &&
+            fragile != "YES" && fragile != "NO") {
             cout << "Invalid input! Please type 'yes' or 'no'.\n";
         }
     } while (fragile != "yes" && fragile != "no" &&
@@ -122,7 +123,7 @@ int main() {
     		cout << "\nDo you want to confirm the order? (yes/no): ";
     		cin >> confirm;
 
-    		if (confirm == "yes" || confirm == "Yes") {
+    		if (confirm == "yes" || confirm == "Yes" || confirm == "YES") {
         		cout << "Order Confirmed! Your " << vehicleType << " is on the way." << endl;
         		break; // exit loop after valid confirmation
     		} 
