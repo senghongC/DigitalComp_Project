@@ -46,7 +46,7 @@ int main() {
     fragile != "Yes" && fragile != "No");
 
     // Distance input
-    cout << "Enter distance value: ";
+    cout << "Enter distance value (km): ";
     distance = debug(999999);
 
     // ===== Vehicle Selection =====
