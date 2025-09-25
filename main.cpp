@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 using namespace std;
-double debug(double limit)//debug for all int
+double debug(double limit)//debug for all double
 {
 	double num;
 	while (!(cin >> num) || num <= 0 || num > limit)//keeps on looping votes_received to cin until a num is entered
@@ -43,13 +43,14 @@ int main() {
             cout << "Invalid input! Please type 'yes' or 'no'.\n";
         }
     } while (fragile != "yes" && fragile != "no" &&
-    fragile != "Yes" && fragile != "No");
+            fragile != "Yes" && fragile != "No" &&
+            fragile != "YES" && fragile != "NO");
 
     // Distance input
     cout << "Enter distance value (km): ";
     distance = debug(999999);
 
-    // ===== Vehicle Selection =====
+    // ===== Vehicle Type Selection =====
     if (weight >= 2 && weight <= 10 &&
         length <= 40 && width <= 40 && height <= 40) {
         vehicleType = "Motorcycle";
